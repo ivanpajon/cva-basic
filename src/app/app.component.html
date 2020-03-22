@@ -1,0 +1,14 @@
+<div class="container">
+
+  <app-color-selector [formControl]="colorSelectorControl">
+  </app-color-selector>
+
+  <div class="margin-top">
+    Color selector value: {{ colorSelectorControl.value }}
+  </div>
+
+  <button (click)="toggleDisableState()" class="margin-top">
+    {{ colorSelectorControl.disabled ? 'Enable' : 'Disable' }} ColorSelector
+  </button>
+
+</div>

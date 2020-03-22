@@ -1,0 +1,62 @@
+:host {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  width: 192px;
+  padding: 8px 16px;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+
+  .container {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 100%;
+    place-content: space-between;
+
+    &.disabled::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      background-color: lightgrey;
+      opacity: 0.8;
+    }
+
+    .color {
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+      cursor: pointer;
+
+      &.selected::after {
+        content: "\2714";
+        color: white;
+        display: flex;
+        flex-flow: row;
+        height: 100%;
+        place-content: center;
+        place-items: center;
+        border-radius: 100%;
+        background-color: rgba(0,0,0,0.5);
+      }
+    }
+
+    #red {
+      background-color: red;
+    }
+
+    #green {
+      background-color: green;
+    }
+
+    #blue {
+      background-color: blue;
+    }
+
+  }
+
+}
